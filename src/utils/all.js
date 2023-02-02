@@ -7,3 +7,5 @@ export const getFormattedDate = (date) =>
         day: "numeric",
       })
     : "";
+
+export const base = "/methaknight";

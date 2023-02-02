@@ -3,24 +3,25 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { base } from "@utils/all";
 
 const menuitems = [
   {
     title: "Infos",
     path: "#",
     children: [
-      { title: "l'entreprise", path: "/company" },
-      { title: "la méthanisation", path: "/methanisation" },
-      { title: "calendrier", path: "/calendar" },
+      { title: "l'entreprise", path: base + "/company" },
+      { title: "la méthanisation", path: base + "/methanisation" },
+      { title: "calendrier", path: base + "/calendar" },
     ],
   },
   {
     title: "À propos",
-    path: "/about",
+    path: base + "/about",
   },
   {
     title: "Contact",
-    path: "/contact",
+    path: base + "/contact",
   },
 ];
 ---
@@ -29,7 +30,7 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-4xl"
+        <a href={base + "/"} class="text-4xl"
           ><span class="font-bold text-slate-800">Agri</span><span
             class="text-slate-500">gaz</span
           >
