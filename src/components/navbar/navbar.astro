@@ -7,17 +7,16 @@ import { base } from "@utils/all";
 
 const menuitems = [
   {
-    title: "Infos",
-    path: "#",
-    children: [
-      { title: "l'entreprise", path: base + "/company" },
-      { title: "la méthanisation", path: base + "/methanisation" },
-      { title: "calendrier", path: base + "/calendar" },
-    ],
+    title: "L'entreprise",
+    path: base + "/company",
   },
   {
-    title: "À propos",
-    path: base + "/about",
+    title: "Méthanisation",
+    path: base + "/methanisation",
+  },
+  {
+    title: "Calendrier",
+    path: base + "/calendar",
   },
   {
     title: "Contact",
@@ -44,23 +43,15 @@ const menuitems = [
           {
             menuitems.map((item, index) => (
               <>
-                {item.children && (
-                  <Dropdown
-                    title={item.title}
-                    children={item.children}
-                    lastItem={index === menuitems.length - 1}
-                  />
-                )}
-
-                {!item.children && (
+                {
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900 text-2xl">
+                      class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900 text-2xl pr-4">
                       {item.title}
                     </a>
                   </li>
-                )}
+                }
               </>
             ))
           }
