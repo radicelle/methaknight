@@ -4,13 +4,13 @@ import heroImage from "assets/dreamedUnit-tr.png";
 import CompanyInfo from "@components/companyInfo.astro";
 ---
 
-<div class="py-6 md:order-1 hidden md:block">
+<div class="py-6 md:order-1 md:block">
   <Picture
     src={heroImage}
     alt="Site rêvé par une intelligence artificielle"
-    widths={[200, 200, 400]}
+    widths={[200, 200, 600]}
     aspectRatio="4:2"
-    sizes="(max-width: 800px) 100vw, 620px"
+    sizes="(max-width: 300px) 100vw, 600px"
     loading="eager"
     format="avif"
     onmouseover={"toto"}
@@ -28,7 +28,7 @@ import CompanyInfo from "@components/companyInfo.astro";
     année.
   </p>
 </div>
-<hr class="rounded m-20"/>
+<hr class="rounded m-20" />
 <div class="flex flex-col p-5">
   <div class="gap-3 mx-auto max-w-4xl mt-16">
     <h2 class="font-bold text-3xl text-gray-800 pb-5">
